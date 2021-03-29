@@ -2,12 +2,12 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 
-import { View } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 import TabRoutes from './tab.routes';
 
 import Home from '../pages/Home';
 import FoodDetails from '../pages/FoodDetails';
+import FinishOrder from '../pages/FinishOrder';
 
 const App = createStackNavigator();
 
@@ -21,6 +21,13 @@ const AppRoutes: React.FC = () => (
         }}
         name="Home"
         component={Home}
+      />
+      <App.Screen
+        options={{
+          headerShown: false,
+        }}
+        name="FinishOrder"
+        component={FinishOrder}
       />
       <App.Screen
         name="MainBottom"
